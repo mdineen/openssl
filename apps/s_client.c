@@ -1694,7 +1694,7 @@ SSL_set_tlsext_status_ids(con, ids);
 		(void)BIO_flush(fbio);
 		BIO_pop(fbio);
 		BIO_free(fbio);
-		BIO_printf(sbio,"AUTH TLS\r\n");
+		BIO_printf(sbio,"AUTH TLS\r\nNOOP\r\n");
 		BIO_read(sbio,sbuf,BUFSIZZ);
 		}
 	if (starttls_proto == PROTO_XMPP)
